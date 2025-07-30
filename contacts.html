@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCraft - Создание современных сайтов</title>
+    <title>Ataul  - Создание современных сайтов</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="WebCraft" width="70">
+                <img src="images/logo.svg" alt="Ataul " width="70">
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -57,7 +57,7 @@
                         <img src="images/icons/email.svg" alt="Email">
                     </div>
                     <h3>Email</h3>
-                    <a href="mailto:info@webcraft.ru">info@webcraft.ru</a>
+                    <a href="mailto:info@ataul.ru">info@ataul.ru</a>
                     <p>Отвечаем в течение дня</p>
                 </div>
                 <div class="contact-card">
@@ -122,7 +122,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="footer-logo">
-                        <img src="images/logo-white.svg" alt="WebCraft" width="180">
+                        <img src="images/logo-white.svg" alt="Ataul " width="180">
                     </a>
                     <p>Создаем современные и эффективные веб-решения с 2023 года</p>
                 </div>
@@ -149,7 +149,7 @@
                     <h3>Контакты</h3>
                     <ul class="footer-contacts">
                         <li><a href="tel:+78001234567">+7 (929) 009-66-46</a></li>
-                        <li><a href="mailto:info@webcraft.ru">info@webcraft.ru</a></li>
+                        <li><a href="mailto:info@ataul.ru">info@ataul.ru</a></li>
                     </ul>
                     <div class="social-links">
                         <a href="#"><img src="images/icons/telegram.svg" alt="Telegram"></a>
@@ -158,12 +158,74 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 WebCraft. Все права защищены</p>
+                <p>© 2025 Ataul . Все права защищены</p>
                 <a href="#">Политика конфиденциальности</a>
             </div>
         </div>
     </footer>
         <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // Инициализация Supabase
+  const supabaseUrl = 'https://dwxzckbqxgxtrzozoonk.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eHpja2JxeGd4dHJ6b3pvb25rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4NTg2MDAsImV4cCI6MjA2OTQzNDYwMH0.Vn4GqRSgZdcmznYd-SP9RptPIHqCHmDZLOreUd_dp18';
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  // Обработка формы
+  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      // Сохраняем в Supabase
+      const { data: dbData, error } = await supabase
+        .from('requests')
+        .insert([{
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          service: data.service,
+          message: data.message,
+          created_at: new Date()
+        }]);
+      
+      if (error) throw error;
+      
+      // Отправляем email клиенту
+      const res = await fetch('https://your-api-endpoint/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: data.email,
+          subject: 'Ваша заявка принята',
+          text: `Спасибо за вашу заявку, ${data.name}! Мы свяжемся с вами в ближайшее время.`
+        })
+      });
+      
+      // Отправляем уведомление вам (можно использовать Telegram bot или email)
+      await fetch('https://your-api-endpoint/notify-admin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: `Новая заявка от ${data.name} (${data.email})`
+        })
+      });
+      
+      alert('Спасибо! Ваша заявка отправлена.');
+      form.reset();
+    } catch (err) {
+      console.error('Error:', err);
+      alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+    }
+  });
+</script>
 </body>
 </html>
