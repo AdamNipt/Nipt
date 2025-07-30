@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft - Создание современных сайтов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="WebCraft" width="70">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <a href="contacts.html" class="btn btn-outline">Обсудить проект</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Наши услуги</h1>
+            <p>Полный спектр услуг для вашего цифрового присутствия</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="service-tabs">
+                <button class="service-tab active" data-tab="webdev">Веб-разработка</button>
+                <button class="service-tab " data-tab="design">Дизайн</button>
+                <button class="service-tab" data-tab="seo">SEO</button>
+                <button class="service-tab" data-tab="support">Поддержка</button>
+            </div>
+
+            <div class="service-content active" id="webdev">
+                <div class="service-info">
+                    <h2>Веб-разработка</h2>
+                    <p>Создаем современные, быстрые и безопасные веб-решения, адаптированные под ваши бизнес-задачи.</p>
+                    <ul class="service-features">
+                        <li>Корпоративные сайты</li>
+                        <li>Интернет-магазины</li>
+                        <li>Лендинги</li>
+                        <li>Веб-приложения</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-primary">Заказать</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/webdev.jpg" alt="Веб-разработка">
+                </div>
+            </div>
+
+            <div class="service-content" id="design">
+                <div class="service-info">
+                    <h2>Дизайн</h2>
+                    <p>Разрабатываем уникальный дизайн, который выделит вас среди конкурентов и понравится вашим клиентам.</p>
+                    <ul class="service-features">
+                        <li>UI/UX дизайн</li>
+                        <li>Редизайн существующих сайтов</li>
+                        <li>Дизайн мобильных приложений</li>
+                        <li>Фирменный стиль</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-primary">Заказать</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/design.jpg" alt="Дизайн">
+                </div>
+            </div>
+
+            <div class="service-content" id="seo">
+                <div class="service-info">
+                    <h2>SEO-оптимизация</h2>
+                    <p>Повышаем видимость вашего сайта в поисковых системах и привлекаем целевую аудиторию.</p>
+                    <ul class="service-features">
+                        <li>Аудит сайта</li>
+                        <li>Техническая SEO-оптимизация</li>
+                        <li>Контент-стратегия</li>
+                        <li>Продвижение в ТОП</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-primary">Заказать</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/seo.jpg" alt="SEO">
+                </div>
+            </div>
+
+            <div class="service-content" id="support">
+                <div class="service-info">
+                    <h2>Техническая поддержка</h2>
+                    <p>Обеспечиваем бесперебойную работу вашего сайта и оперативно решаем любые технические вопросы.</p>
+                    <ul class="service-features">
+                        <li>Обновление контента</li>
+                        <li>Исправление ошибок</li>
+                        <li>Резервное копирование</li>
+                        <li>Консультации</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-primary">Заказать</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/support.jpg" alt="Поддержка">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Тарифы</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Старт</h3>
+                    <div class="price">от 50 000 ₽</div>
+                    <ul class="pricing-features">
+                        <li>Лендинг</li>
+                        <li>5 уникальных страниц</li>
+                        <li>Адаптивный дизайн</li>
+                        <li>Базовое SEO</li>
+                        <li>Срок: 2-3 недели</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-outline">Выбрать</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Популярный</div>
+                    <h3>Бизнес</h3>
+                    <div class="price">от 150 000 ₽</div>
+                    <ul class="pricing-features">
+                        <li>Корпоративный сайт</li>
+                        <li>До 15 страниц</li>
+                        <li>Индивидуальный дизайн</li>
+                        <li>SEO-оптимизация</li>
+                        <li>Срок: 4-6 недель</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-primary">Выбрать</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Премиум</h3>
+                    <div class="price">от 300 000 ₽</div>
+                    <ul class="pricing-features">
+                        <li>Интернет-магазин</li>
+                        <li>Неограниченные страницы</li>
+                        <li>Эксклюзивный дизайн</li>
+                        <li>Полное SEO</li>
+                        <li>Срок: от 8 недель</li>
+                    </ul>
+                    <a href="contacts.html" class="btn btn-outline">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Какой срок разработки сайта?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Срок зависит от сложности проекта. Лендинг мы можем сделать за 2-3 недели, корпоративный сайт - за 4-6 недель, интернет-магазин - от 8 недель. Точные сроки определяются после обсуждения всех деталей проекта.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Вы предоставляете домен и хостинг?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы можем помочь с регистрацией домена и настройкой хостинга, но эти услуги оплачиваются отдельно. Также вы можете использовать свои собственные домен и хостинг - мы адаптируемся под ваши предпочтения.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Можно ли вносить изменения в процессе работы?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы предусматриваем несколько этапов согласования и всегда открыты к правкам. Однако значительные изменения, не предусмотренные изначальным техническим заданием, могут повлиять на сроки и стоимость проекта.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo-white.svg" alt="WebCraft" width="180">
+                    </a>
+                    <p>Создаем современные и эффективные веб-решения с 2023 года</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="services.html#webdev">Веб-разработка</a></li>
+                        <li><a href="services.html#design">Дизайн</a></li>
+                        <li><a href="services.html#seo">SEO-оптимизация</a></li>
+                        <li><a href="services.html#support">Поддержка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><a href="tel:+78001234567">+7 (929) 009-66-46</a></li>
+                        <li><a href="mailto:info@webcraft.ru">info@webcraft.ru</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                        <a href="#"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 WebCraft. Все права защищены</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+        <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

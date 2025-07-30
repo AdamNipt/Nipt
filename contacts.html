@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft - Создание современных сайтов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="WebCraft" width="70">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <a href="contacts.html" class="btn btn-outline">Обсудить проект</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами любым удобным способом</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/phone.svg" alt="Телефон">
+                    </div>
+                    <h3>Телефон</h3>
+                    <a href="tel:+78001234567">+7 (929) 009-66-46</a>
+                    <p>Работаем с 9:00 до 18:00 по МСК</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/email.svg" alt="Email">
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:info@webcraft.ru">info@webcraft.ru</a>
+                    <p>Отвечаем в течение дня</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/location.svg" alt="Адрес">
+                    </div>
+                    <h3>Адрес</h3>
+                    <address></address>
+                    <p>Офис открыт по предварительной записи</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-info">
+                    <h2>Оставьте заявку</h2>
+                    <p>Заполните форму, и мы свяжемся с вами для обсуждения деталей проекта</p>
+                    <ul class="form-benefits">
+                        <li>Бесплатная консультация</li>
+                        <li>Расчет стоимости в течение дня</li>
+                        <li>Гарантия конфиденциальности</li>
+                    </ul>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="" disabled selected>Интересующая услуга</option>
+                            <option value="webdev">Веб-разработка</option>
+                            <option value="design">Дизайн</option>
+                            <option value="seo">SEO</option>
+                            <option value="support">Поддержка</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Расскажите о вашем проекте"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&amp;lang=ru_RU&amp;scroll=false" frameborder="0"></iframe>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo-white.svg" alt="WebCraft" width="180">
+                    </a>
+                    <p>Создаем современные и эффективные веб-решения с 2023 года</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="services.html#webdev">Веб-разработка</a></li>
+                        <li><a href="services.html#design">Дизайн</a></li>
+                        <li><a href="services.html#seo">SEO-оптимизация</a></li>
+                        <li><a href="services.html#support">Поддержка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><a href="tel:+78001234567">+7 (929) 009-66-46</a></li>
+                        <li><a href="mailto:info@webcraft.ru">info@webcraft.ru</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                        <a href="#"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 WebCraft. Все права защищены</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+        <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
