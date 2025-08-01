@@ -1,5 +1,5 @@
-import { supabase } from "lib/supabase";
-import ProductCard from "components/ProductCard";
+import { supabase } from "@/lib/supabase";
+import ProductCard from "@/components/ProductCard";
 
 export default async function CatalogPage() {
   const { data: products } = await supabase.from("products").select("*");
